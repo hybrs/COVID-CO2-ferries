@@ -12,7 +12,7 @@
  - [Usage](#usage)
 
 <a id='about' name='about'></a>
-# About [[to ToC]](#toc)
+## About [[to ToC]](#toc)
 
 This repository contains auxiliary material useful to replicate the paper results:
 
@@ -29,7 +29,7 @@ This repository contains auxiliary material useful to replicate the paper result
   core cross-validation python code
 
 <a id='usage' name='usage'></a>
-# Usage [[to ToC]](#toc)
+## Usage [[to ToC]](#toc)
   
   1. install [Anaconda](https://www.anaconda.com/products/distribution)
   
