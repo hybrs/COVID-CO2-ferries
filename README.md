@@ -1,10 +1,18 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
 
-### Paper Title:  "The footprint of COVID-19 on ferry CO2 emissions in Europe"
+# How COVID-19 affected GHG emissions of ferries in Europe
+<table>
+<thead>
+  <tr>
+    <td><a href="https://orcid.org/0000-0001-9205-7765"><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> G. Mannarini<sup>1</sup></td>
+    <td><a href="https://orcid.org/0000-0002-4045-4790"><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> M.L. Salinas<sup>1</sup></td>
+    <td><a href="https://orcid.org/0000-0003-4259-3505"><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> L. Carelli<sup>1</sup></td>
+    <td><a href="https://orcid.org/0000-0001-5132-9488"><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a>   A. Fassò<sup>2</sup></td>
+  </tr>
+</thead>
+</table>
 
-### Authors    :   G. Mannarini, M.L. Salinas, L.Carelli, A. Fassò
-
-<hr>
+---
 
 <a id='toc' name='toc'></a>
 # Table of Contents
@@ -13,22 +21,23 @@
  
  - [Usage](#usage)
 
+---
+
 <a id='about' name='about'></a>
 ## About [[to ToC]](#toc)
 
-This repository contains auxiliary material useful to replicate the paper results:
+This repository contains auxiliary material useful to replicate the results of the *"How COVID-19 affected GHG emissions of ferries in Europe"*
+, which is currently under review at [Sustainability](https://www.mdpi.com/journal/sustainability). Once published, you may want to **cite it.**
 
-  - `README.md`,<br>
-  this file
+The table below describes the content of the repository.
 
-  - `notebook.ipynb`,<br>
-  jupyter notebook that reproduces the paper results performing a 10-fold cross-validation on the same models
-
-  - `su-venv.yml`,<br>
-  conda virtual-env to be imported in order to run the provided notebook
-
-  - `cv_routines.py`,<br>
-  core cross-validation python code
+| filename       | description                                                                                                 |
+|----------------|-------------------------------------------------------------------------------------------------------------|
+| `README.md`     | this file                                                                                                   |
+| `notebook.ipynb` | jupyter notebook that reproduces the paper results performing a 10-fold cross-validation on the same models |
+| `cv_routines.py` | core cross-validation python code                                                                           |
+| `su-venv.yml`    | conda virtual-env to be imported in order to run the provided notebook                                      |
+| `LICENSE`    | BSD 2-Clause License                               |
 
 <a id='usage' name='usage'></a>
 ## Usage [[to ToC]](#toc)
@@ -47,10 +56,14 @@ This repository contains auxiliary material useful to replicate the paper result
   jupyter-notebook
   ```
 
-
 ---
 **Copyright (c) Fondazione CMCC, 2022**
 
-This work was supported by the European Regional Development Fund through the Italy-Croatia Interreg programme, project GUTTA, grant number 10043587.
+
+*This work was supported by the European Regional Development Fund through the Italy-Croatia Interreg programme, project GUTTA, grant number 10043587.*
 
 ---
+
+<sup>1</sup> [CMCC Foundation](http://www.cmcc.it)
+
+<sup>2</sup> [Università degli studi di Bergamo](http://www.unibg.it)
