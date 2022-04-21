@@ -4,14 +4,15 @@
 
 <hr>
 
+<a id='toc' name='toc'></a>
 # Table of Contents
 
  - [About](#about)
  
  - [Usage](#usage)
 
-
-# About [[to ToC]](#tableofcontents)
+<a id='about' name='about'></a>
+# About [[to ToC]](#toc)
 
 This repository contains auxiliary material useful to replicate the paper results:
 
@@ -27,8 +28,8 @@ This repository contains auxiliary material useful to replicate the paper result
   - `cv_routines.py`,<br>
   core cross-validation python code
 
-
-# Usage [[to ToC]](#tableofcontents)
+<a id='usage' name='usage'></a>
+# Usage [[to ToC]](#toc)
   
   1. install [Anaconda](https://www.anaconda.com/products/distribution)
   
