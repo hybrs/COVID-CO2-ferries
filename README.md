@@ -4,11 +4,14 @@
 
 <hr>
 
-#### Copyright (c) 2022 - CMCC
+# Table of Contents
 
-<hr>
+ - [About](#about)
+ 
+ - [Usage](#usage)
 
-# About
+
+# About [[to ToC]](#tableofcontents)
 
 This repository contains auxiliary material useful to replicate the paper results:
 
@@ -25,19 +28,23 @@ This repository contains auxiliary material useful to replicate the paper result
   core cross-validation python code
 
 
-<hr>
-
-# Usage:
+# Usage [[to ToC]](#tableofcontents)
   
   1. install [Anaconda](https://www.anaconda.com/products/distribution)
   
   2. import conda virtual environment from sustainability-venv.yml with
-
-    WAITING TIME ~ 20min
-    > conda env create -f su-venv.yml
+  ```bash
+  # WAITING TIME ~ 20min
+  conda env create -f su-venv.yml
+  ```
   
   3. launch and run the provided notebook inside su-venv environment with
+  ```bash
+  conda activate su-venv  
+  jupyter-notebook
+  ```
   
-    > conda activate su-venv  
-    > jupyter-notebook
+  
+<hr>
 
+#### Copyright (c) 2022 - CMCC
