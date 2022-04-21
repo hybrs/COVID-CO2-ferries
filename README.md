@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
+
 ### Paper Title:  "The footprint of COVID-19 on ferry CO2 emissions in Europe"
 
 ### Authors    :   G. Mannarini, M.L. Salinas, L.Carelli, A. Fassò
@@ -44,8 +46,11 @@ This repository contains auxiliary material useful to replicate the paper result
   conda activate su-venv  
   jupyter-notebook
   ```
-  
-  
-<hr>
 
-#### Copyright (c) 2022 - CMCC
+
+---
+**Copyright (c) Fondazione CMCC, 2022**
+
+This work was supported by the European Regional Development Fund through the Italy-Croatia Interreg programme, project GUTTA, grant number 10043587.
+
+---
