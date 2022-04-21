@@ -57,10 +57,22 @@ The table below describes the content of the repository.
   ```
 
 ---
-**Copyright (c) Fondazione CMCC, 2022**
 
 
-*This work was supported by the European Regional Development Fund through the Italy-Croatia Interreg programme, project GUTTA, grant number 10043587.*
+
+<div class="warning" style='padding:0.1em; background-color: #f9e79f; color:#9a7d0a; border-radius:3%'>
+<span>
+<p style='margin-top:1em; text-align:center'>
+<b>Copyright (c) Fondazione CMCC, 2022</b></p>
+<p style='margin-left:1em;, font-style:italic'>
+This work was supported by the European Regional Development Fund through the Italy-Croatia Interreg programme, project GUTTA, grant number 10043587.
+</p>
+</span>
+</div>
+
+
+
+
 
 ---
 
