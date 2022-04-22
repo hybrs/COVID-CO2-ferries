@@ -1,4 +1,12 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
+[![Ubuntu](https://img.shields.io/badge/Linux-passed-green)](https://img.shields.io/badge/Linux-passed-green)
+[![macOs](https://img.shields.io/badge/MacOs-passed-green)](https://img.shields.io/badge/macOs-passed-green)
+[![Windows](https://img.shields.io/badge/Windows-passed-green)](https://img.shields.io/badge/Windows-passed-green)
+
+[![Conda](https://img.shields.io/badge/conda-342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white)](https://img.shields.io/badge/conda-342B029.svg?&style=for-the-badge&logo=anaconda&logoColor=white)
+[![jupyter](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white)](https://img.shields.io/badge/Jupyter-F37626.svg?&style=for-the-badge&logo=Jupyter&logoColor=white)
+[![python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+[![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 
 # How COVID-19 affected GHG emissions of ferries in Europe
 <table>
