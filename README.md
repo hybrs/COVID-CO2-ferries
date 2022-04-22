@@ -21,6 +21,8 @@
  
  - [Usage](#usage)
 
+ - [References](#ref)
+
 ---
 
 <a id='about' name='about'></a>
@@ -55,6 +57,31 @@ The table below describes the content of the repository.
   conda activate su-venv  
   jupyter-notebook
   ```
+
+---
+
+<a id='ref' name='ref'></a>
+## References [[to ToC]](#toc)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
+
+Please, when using this code and the data available on Zenodo, cite the references listed in ... according to you needs, or if you are lazy just cite:
+
+```
+
+@article{sustainability-1686948,
+  title={How COVID-19 affected GHG emissions of ferries in Europe},
+  author={G. Mannarini, M.L. Salinas, L. Carelli, A.Fassò},
+  journal={Sustainability},
+  volume={xx},
+  number={xx},
+  pages={xx},
+  year={2022},
+  publisher={MDPI}
+  doi={}
+}
+
+```
 
 ---
 **Copyright (c) Fondazione CMCC, 2022**
