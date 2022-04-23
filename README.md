@@ -73,19 +73,43 @@ The table below describes the content of the repository.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
 
-Please, when using this code and the data available on Zenodo, cite the references listed in ... according to you needs, or if you are lazy just cite:
+Please, when using this code and the data available on Zenodo, cite the references listed below according to you needs:
 
 ```
+@dataset{mannarini_gianandrea_2022_6473158,
+  author       = {Mannarini, Gianandrea and
+                  Salinas, Mario and
+                  Carelli, Lorenzo and
+                  Fassò, Alessandro},
+  title        = {COVID-CO2-ferries},
+  month        = apr,
+  year         = 2022,
+  note         = {{(c) Fondazione CMCC, 2022  This work was supported 
+                   by the European Regional Development Fund through
+                   the Italy-Croatia Interreg programme, project
+                   GUTTA, grant number 10043587.}},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.6473158},
+  url          = {https://doi.org/10.5281/zenodo.6473158}
+}
+
 
 @article{sustainability-1686948,
-  title={How COVID-19 affected GHG emissions of ferries in Europe},
-  author={G. Mannarini, M.L. Salinas, L. Carelli, A.Fassò},
-  journal={Sustainability},
-  volume={xx},
-  number={xx},
-  pages={xx},
-  year={2022},
-  publisher={MDPI}
+  title        = {How COVID-19 affected GHG emissions of ferries in Europe},
+  author       = {Mannarini, Gianandrea and
+                  Salinas, Mario and
+                  Carelli, Lorenzo and
+                  Fassò, Alessandro},
+  journal      = {Sustainability},
+  volume       = {xx},
+  number       = {xx},
+  pages        = {xx},
+  year         = {2022},
+  publisher    = {MDPI}
+  note         = {{(c) Fondazione CMCC, 2022  This work was supported 
+                 by the European Regional Development Fund through
+                 the Italy-Croatia Interreg programme, project
+                 GUTTA, grant number 10043587.}},
   doi={}
 }
 
