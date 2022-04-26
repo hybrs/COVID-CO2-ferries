@@ -73,7 +73,7 @@ The table below describes the content of the repository.
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
 
-Please, when using this code and the data available on Zenodo, cite the references listed below according to you needs:
+Please, when using this code and the data available on Zenodo, cite the references listed below according to your needs:
 
 ```
 @dataset{mannarini_gianandrea_2022_6473158,
