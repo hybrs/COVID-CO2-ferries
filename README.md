@@ -82,8 +82,8 @@ Please, when using this code and the data available on Zenodo, cite the referenc
                   Carelli, Lorenzo and
                   Fassò, Alessandro},
   title        = {COVID-CO2-ferries},
-  month        = apr,
-  year         = 2022,
+  month        = {April},
+  year         = {2022},
   note         = {{(c) Fondazione CMCC, 2022  This work was supported 
                    by the European Regional Development Fund through
                    the Italy-Croatia Interreg programme, project
