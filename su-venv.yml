@@ -30,6 +30,7 @@ dependencies:
   - python=3.8.12
   - pip
   - ipykernel
+  - jupyter
   - notebook
   - nb_conda_kernels
   # R dependencies
