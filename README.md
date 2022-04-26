@@ -56,7 +56,7 @@ The table below describes the content of the repository.
   
   2. import conda virtual environment from sustainability-venv.yml with
   ```bash
-  # WAITING TIME ~ 20min
+  # WAITING TIME ~ 10min
   conda env create -f su-venv.yml
   ```
   
