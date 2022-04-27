@@ -1,4 +1,6 @@
+[![DOI:10.3390](http://img.shields.io/badge/DOI-10.3390/su14095287-blue.svg)](https://doi.org/10.3390/su14095287)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
+
 ![Ubuntu](https://img.shields.io/badge/Linux-passed-green)
 ![macOs](https://img.shields.io/badge/MacOs-passed-green)
 ![Windows](https://img.shields.io/badge/Windows-passed-green)
@@ -71,7 +73,9 @@ The table below describes the content of the repository.
 <a id='ref' name='ref'></a>
 ## References [[to ToC]](#toc)
 
+[![DOI:10.3390](http://img.shields.io/badge/DOI-10.3390/su14095287-blue.svg)](https://doi.org/10.3390/su14095287)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6473158.svg)](https://doi.org/10.5281/zenodo.6473158)
+
 
 Please, when using this code and the data available on Zenodo, cite the references listed below according to your needs:
 
@@ -84,33 +88,26 @@ Please, when using this code and the data available on Zenodo, cite the referenc
   title        = {COVID-CO2-ferries},
   month        = {April},
   year         = {2022},
-  note         = {{(c) Fondazione CMCC, 2022  This work was supported 
-                   by the European Regional Development Fund through
-                   the Italy-Croatia Interreg programme, project
-                   GUTTA, grant number 10043587.}},
+  note         = {(c) Fondazione CMCC, 2022  ERDF through Italy-Croatia Interreg Programme: 10043587 (GUTTA)},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.6473158},
   url          = {https://doi.org/10.5281/zenodo.6473158}
 }
 
 
-@article{sustainability-1686948,
-  title        = {How COVID-19 affected GHG emissions of ferries in Europe},
-  author       = {Mannarini, Gianandrea and
-                  Salinas, Mario and
-                  Carelli, Lorenzo and
-                  Fassò, Alessandro},
-  journal      = {Sustainability},
-  volume       = {xx},
-  number       = {xx},
-  pages        = {xx},
-  year         = {2022},
-  publisher    = {MDPI}
-  note         = {{(c) Fondazione CMCC, 2022  This work was supported 
-                 by the European Regional Development Fund through
-                 the Italy-Croatia Interreg programme, project
-                 GUTTA, grant number 10043587.}},
-  doi={}
+
+@article{su14095287,
+  author         = {Mannarini, Gianandrea and Salinas, Mario Leonardo and Carelli, Lorenzo and Fassò, Alessandro},
+  title          = {How COVID-19 Affected GHG Emissions of Ferries in Europe},
+  journal        = {Sustainability},
+  volume         = {14},
+  year           = {2022},
+  number         = {9},
+  article-number = {5287},
+  note           = {(c) Fondazione CMCC, 2022  ERDF through Italy-Croatia Interreg Programme: 10043587 (GUTTA)}
+  url            = {https://www.mdpi.com/2071-1050/14/9/5287},
+  issn           = {2071-1050},
+  doi            = {10.3390/su14095287}
 }
 
 ```
@@ -118,7 +115,7 @@ Please, when using this code and the data available on Zenodo, cite the referenc
 ---
 **Copyright (c) Fondazione CMCC, 2022**
 
-*This work was supported by the European Regional Development Fund through the Italy-Croatia Interreg programme, project GUTTA, grant number 10043587.*
+*ERDF through Italy-Croatia Interreg Programme: 10043587 (GUTTA)*
 
 ---
 
