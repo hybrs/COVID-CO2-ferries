@@ -57,6 +57,30 @@ figsize = (12, 9)
 
 
 def get_SU_models(dep_var):
+    """
+    Returns a list of strings, each of which is a formula of a model in [1]. 
+    The function takes one argument, which is the name of the dependent variable. 
+
+    Parameters
+    ----------
+    dep_var : str
+        name of the dependent variable, can be `'Etot'` or `'Eber'`
+
+    Returns
+    -------
+        : list of str
+        A list of strings, each string is a model formula.
+
+    References
+    ----------
+
+    [1] Mannarini G, Salinas ML, Carelli L, Fassò A. 
+    How COVID-19 Affected GHG Emissions of Ferries in Europe. 
+    Sustainability. 2022; 14(9):5287. https://doi.org/10.3390/su14095287 
+
+
+    """
+
     return [
     '%s ~ 1' % dep_var,
     '%s ~ Dom' % dep_var,
@@ -102,10 +126,17 @@ def get_SU_models(dep_var):
 
 
 def init_mpl():
+    """
+    It sets the font size of the tick labels to the value of the global variable `ticks_fsize`
+    """
     mpl.rcParams['ytick.labelsize'] = ticks_fsize
     mpl.rcParams['xtick.labelsize'] = ticks_fsize
 
 def create_dir(root_dir, dir_path):
+    """
+    It creates, starting from `root_dir`, that must exist BEFORE, 
+    all the subdirectories specified in `dir_path`
+    """
     tmp = root_dir
     for sub_dir in dir_path.split('/'):
         tmp += '/' + sub_dir if tmp[-1] != '/' else sub_dir
@@ -113,19 +144,20 @@ def create_dir(root_dir, dir_path):
 
 
 def change_Dom_ref(df, newRef = 'MED'):
+    """
+    Change the Domain reference category of models by putting "0" as prefix.
+    Possible values for `newRef` are `'BAL'`, `'MED'`, `'NOR'`
+    """
     _df = df.copy()
-    """
-    change the Domain reference category of models by putting "0" as prefix
-    possible values for newRef = ['BAL', 'MED', 'NOR']
-    """
+
     
     _df.loc[:, 'Dom'] = _df.Dom.apply(lambda x: '0%s' % x if x == newRef else x)
     return _df
 
 def change_VType_ref(df, newRef = 1):
     """
-    change the VType reference category of models by putting "0" as prefix
-    possible values for newRef = [0, 1, ..., 13, 15]
+    Change the VType reference category of models by putting "0" as prefix
+    possible values for `newRef` are  `0, 1, ..., 13, 15`
     """
     _newRef = ('_0%d' if newRef < 10 else '_%d') % newRef
     
@@ -133,25 +165,31 @@ def change_VType_ref(df, newRef = 1):
     _df.loc[:, 'VType'] = _df.VType.apply(lambda x: '0%s' % x if x == _newRef else x)
     return _df
 
-def load_cv_data(data_path, nlines_skip=0):
-    df = []
-    with open(data_path, 'r') as fin:
-        # nlines_skip = 4  # OLD
-        [fin.readline() for i in range(nlines_skip)]
-        columns = fin.readline().replace('\n', '').split(',')[1:]
-        data = []
-        line = fin.readline()
-        while line:
-            data.append(line.replace('\n', '').split(',')[1:])
-            line = fin.readline()
-
-        df = pd.DataFrame(data=data, columns=columns)
-        df.Eber = df.Eber.astype(float)
-        df.Etot = df.Etot.astype(float)
-        df.nCalls = df.nCalls.astype(float)
-    return df
-
 def cross_validation(data, models_dict, dep_var, nfolds=10, randseed=1, save_dir=''):
+    """
+    It takes a dataframe, a dictionary of models, and a dependent variable, the number of cv-folds and the random seed,
+    then performs a `nfolds`-fold cross validation and saves the results into `save_dir` 
+    
+    Parameters
+    ----------
+    data : pandas.DataFrame
+        the dataframe containing the data
+
+    models_dict: dictionary
+        a dictionary of model formulas, where the key is the model id and the value is the formula 
+
+    dep_var : str
+        name of the dependent variable, can be `'Etot'` or `'Eber'`
+
+    nfolds: int (optional)
+        number of folds to use in cross validation, defaults to 10 (optional)
+    
+    randseed: int (optional)
+        the random seed, defaults to 1
+    
+    save_dir: str (optional)
+        the directory where you want to save the output
+    """
     save = len(save_dir) > 0
     dep_var = models_dict[list(models_dict.keys())[0]].split('~')[0].strip()
     
@@ -192,7 +230,7 @@ def cross_validation(data, models_dict, dep_var, nfolds=10, randseed=1, save_dir
         print('[%s] Iteration %d/%d started...' % (datetime.datetime.now().time(), nit, nfolds))
 
         itDB = cross_validation_iteration(
-            nit, data, train_data, validation_data, models_dict
+            nit, train_data, validation_data, models_dict
         )
         scoreDB = scoreDB.append(itDB)
         print('[%s] Iteration %d/%d DONE.' % (datetime.datetime.now().time(), nit, nfolds))
@@ -251,7 +289,34 @@ def cross_validation(data, models_dict, dep_var, nfolds=10, randseed=1, save_dir
 
 
 
-def cross_validation_iteration(iteration, data, train_data_, validation_data_, models_dict):
+def cross_validation_iteration(iteration, train_data_, validation_data_, models_dict):
+    """
+    This function implements a generic itaration of a k-fold cross-validation procedure.
+    It takes a dictionary of models, a training set, and a validation set, and returns a dataframe with
+    the model scores
+    
+    Parameters
+    ----------
+    
+    iteration : int
+        iteration number
+
+    train_data_ : pandas.DataFrame
+        a dataframe containing the training data
+    
+    validation_data_ : int
+        a dataframe containing the data that will be used for validation
+
+    models_dict : dictionary
+        a dictionary of models, where the key is the model ID and the value is the model
+    formula
+
+
+    Returns
+    -------
+
+    A dataframe with the scores of the models
+    """
     iterations, model_ids, formulae, nfcs, nrvs, ps, aics, bics, llfs, R2TRM, R2TRC, R2VALM, R2VALC, R2TS, RMSETRM, RMSETRC, RMSEVALM, RMSEVALC, RMSETS = [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], [], []
 
     dep_var = (models_dict[1].split('~')[0]).strip()
@@ -371,19 +436,6 @@ def compute_cv_scores_table(all_iterations_scoresDB, nsd = 3):
   -------
   final_scoresDF : pandas.DataFrame
       consolidated cv scores dataframe.
-  
-  Notes
-  -----
-  Notes about the implementation algorithm (if needed).
-
-  References
-  ----------
-  Cite the relevant literature, e.g. [1]_.  You may also cite these
-  references in the notes section above.
-
-  [1] O. McNoleg, "<TITLE>", <>Computers & Geosciences, vol. 22,
-      pp. 585-588, 1996.
-
 
   """
   # one row for each iteration and model
@@ -428,6 +480,10 @@ def compute_cv_scores_table(all_iterations_scoresDB, nsd = 3):
      'RMSEtrM','RMSEtrC', 'RMSEvM', 'RMSEvC']]
 
 def color_and_border_rows(worksheet, border=None):
+    """
+    This function takes a worksheet and a border style and colors the rows in the worksheet with
+    alternating colors and applies the border style to each cell
+    """
     # color group of rows
     #1-5, 21-25 blue
     #6-20, 26-40 orange
@@ -442,6 +498,9 @@ def color_and_border_rows(worksheet, border=None):
 
 
 def set_columns_width(worksheet, wmin=10, wmax=60):
+    """
+    It sets the width of all the columns but one to `vmax`. The 'B' columns width is set to `vmin`
+    """
     # hardcoded col witdh
     # for col, value in dims.items():
     alphabet_upper = string.ascii_uppercase
@@ -452,6 +511,10 @@ def set_columns_width(worksheet, wmin=10, wmax=60):
 
 
 def center_align_excel(work_sheet):
+    """
+    It takes a worksheet as an argument and then iterates through 
+    each cell setting the alignment to center.
+    """
     for col in work_sheet.columns:
         for cell in col:
             cell.alignment = Alignment(horizontal='center', vertical='center')
@@ -538,11 +601,13 @@ def save_model_summaries(data, models_dict, dep_var, outdir):
     
   writer.save()
   writer.close()
-  
-
 
 
 def fit_evaluate_single_model(model_id, formula, data_to_fit, xlsx_writer=None):
+    """
+    It fits a model, evaluates it, and writes the results to an Excel file
+    """
+
     if not xlsx_writer:
         print('no output file writer provided')
         return
@@ -677,7 +742,11 @@ def fit_evaluate_single_model(model_id, formula, data_to_fit, xlsx_writer=None):
 
     return model
 
+
 def reformat_ticks(ax, xminor_multiple=None, xmajor_multiple=None):
+    """
+    It removes the right and top spines, sets the major and minor ticks, and sets the major tick labels
+    """
     ax.spines['right'].set_visible(False)
     # ax.spines['left'].set_visible(False)
     # ax.spines['bottom'].set_visible(False)
@@ -697,7 +766,16 @@ def reformat_ticks(ax, xminor_multiple=None, xmajor_multiple=None):
 
 
 def cv_results_plot(variable, chosen_model=30, cv_dir='', outdir='', save_plot=False):
+    """
+    It plots the AIC and RMSE values for each model in the cross-validation as in [1].
 
+    References
+    ----------
+
+    [1] Mannarini G, Salinas ML, Carelli L, Fassò A. 
+    How COVID-19 Affected GHG Emissions of Ferries in Europe. 
+    Sustainability. 2022; 14(9):5287. https://doi.org/10.3390/su14095287 
+    """
     def format_func_e4(value, tick_number):
         v = np.round(value / 1e4, 2)
         return v
