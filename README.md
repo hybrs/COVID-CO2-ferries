@@ -18,7 +18,8 @@
       <a href="mailto:gianandrea.mannarini%40cmcc.it?cc=mario.salinas%40cmcc.it%3Blorenzo.carelli%40cmcc.it%3Balessandro.fasso%40unibg.it&subject=Info%20about%20How%20COVID-19%20affected%20GHG%20emissions%20of%20ferries%20in%20Europe&body=Dear%20authors%2C%0D%0A" target='_blank'>✉️</a>
       <a href="https://orcid.org/0000-0001-9205-7765" target='_blank'><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> G. Mannarini<sup>1,*</sup></td>
     <td>
-        <a href="mailto:mario.salinas%40cmcc.it?cc=gianandrea.mannarini%40cmcc.it%3Blorenzo.carelli%40cmcc.it%3Balessandro.fasso%40unibg.it&subject=Info%20about%20How%20COVID-19%20affected%20GHG%20emissions%20of%20ferries%20in%20Europe&body=Dear%20authors%2C%0D%0A" target='_blank'>✉️</a><a href="https://orcid.org/0000-0002-4045-4790" target='_blank'><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> M.L. Salinas<sup>1</sup></td>
+        <a href="mailto:mario.salinas%40cmcc.it?cc=gianandrea.mannarini%40cmcc.it%3Blorenzo.carelli%40cmcc.it%3Balessandro.fasso%40unibg.it&subject=Info%20about%20How%20COVID-19%20affected%20GHG%20emissions%20of%20ferries%20in%20Europe&body=Dear%20authors%2C%0D%0A" target='_blank'>✉️</a>
+        <a href="https://orcid.org/0000-0002-4045-4790" target='_blank'><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> M.L. Salinas<sup>1</sup></td>
     <td>
       <a href="mailto:lorenzo.carelli@cmcc.it?cc=gianandrea.mannarini%40cmcc.it%3Bmario.salinas%40cmcc.it%3Balessandro.fasso%40unibg.it&subject=Info%20about%20How%20COVID-19%20affected%20GHG%20emissions%20of%20ferries%20in%20Europe&body=Dear%20authors%2C%0D%0A" target='_blank'>✉️</a>
       <a href="https://orcid.org/0000-0003-4259-3505" target='_blank'><img width=15 src="https://upload.wikimedia.org/wikipedia/commons/0/06/ORCID_iD.svg"></a> L. Carelli<sup>1</sup></td>
