@@ -39,7 +39,9 @@
 ## About [[to ToC]](#toc)
 
 This repository contains auxiliary material useful to replicate the results of the *"How COVID-19 affected GHG emissions of ferries in Europe"*
-, which is currently under review at [Sustainability](https://www.mdpi.com/journal/sustainability). Once published, you may want to **cite it.**
+, which has been published in [Sustainability](https://www.mdpi.com/journal/sustainability) as part
+of the Special Issue [Statistics and Econometrics of Environment and Climate
+Change](https://www.mdpi.com/journal/sustainability/special_issues/statistics_econometrics), and is available online at [this link](https://doi.org/10.3390/su14095287). Please **cite** this code, the data and the paper according to your needs. A BibTex template can be found in the [References](#ref) section of the readme.
 
 The table below describes the content of the repository.
 
